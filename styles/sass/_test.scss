@@ -1,0 +1,45 @@
+@mixin fontStyle($color, $fontSize) {
+    font-size: $fontSize;
+    background-color: $color;
+    color: white;
+}
+
+h1{
+    font-size: 40px;
+    @include fontStyle(red, 40px);
+}
+
+p{
+    font-size: 20px;
+    @include fontStyle(blue, 20px);
+}
+
+// nesting de elementos selectores
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 60px 0;
+
+    li{
+        display: inline-block;
+
+        a{
+            // nesting de propiedades
+            text:{
+                // text-decoration: none;
+                decoration: none;
+                // text-transform: uppercase
+                transform: uppercase;
+                // text-align: center;
+                align: center;
+            }
+            font:{
+                family: sans-serif;
+                size: 23px;
+            }
+            color: white;
+            padding: 20px;
+            background-color: darkblue;
+        }
+    }
+}
